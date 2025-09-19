@@ -102,6 +102,7 @@ jobs:
           make clean package SIDELOADING=1
         env:
           THEOS: ${{ github.workspace }}/theos
+          CFLAGS: "-Wno-vla-cxx-extension"
 
       - name: Inject tweak into provided IPA
         run: |
